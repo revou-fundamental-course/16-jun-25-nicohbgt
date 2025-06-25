@@ -3,49 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Main Pages</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
 </head>
 <body>
     <header>
-            <h1 style="text-align: center;">Mathlator</h1>
-            <h4 style="text-align: center;">The Simple Mathematic Calculator</h4>
+            <!-- Header untuk sistem -->
+            <h1>Mathlator</h1>
+            <h4>The Simple Mathematic Calculator</h4>
     </header>
 
     <main>
         <div class="Introduction">
-            <p>Sistem sederhana ini dirancang untuk menghitung luas dan keliling dari bangun datar</p>
-            <p>Pilih bangun datar yang ingin dihitung : </p>
+            <!-- Bagian halaman pertama (pengenalan sistem) dan pemilihan bentuk -->
+            <p>Sistem sederhana ini dirancang untuk menghitung luas dan keliling dari bangun datar dan bangun ruang</p>
+            <p>Pilih bangun datar yang ingin dihitung</p>
             <nav>
-                <button class="Triangle">Segitiga</button>
-                <button class="Parallelogram">Jajar Genjang</button>
+                <a href="segitiga.html">
+                    <button class="opsi_1">Segitiga</button>
+                </a>
+                <button class="opsi_2">Jajar Genjang</button>
+                <button class="opsi_3">Persegi</button>
+                <button class="opsi_4">Persegi Panjang</button>
             </nav>
-        </div>
-
-        <div class="Area">
-            <h3>Luas</h3>
-            <p>Untuk menghitung luas, masukkan nilai panjang dan lebar dari bangun datar yang dipilih.</p>
-            <img src="" alt="Gambar Bangun Datar">
-            <br>
-            <input type="number" id="Length" placeholder="Panjang">
-            <input type="number" id="Width" placeholder="Lebar">
-
-        </div>
-
-        <div class="Circumferences">
-            <h3>Keliling</h3>
-            <p>Untuk menghitung keliling, masukkan nilai panjang sisi dari bangun datar yang dipilih.</p>
-            <img src="" alt="Gambar Bangun Datar">
-            <br>
-            <input type="number" id="Side1" placeholder="Sisi 1">
-            <input type="number" id="Side2" placeholder="Sisi 2">
-            <input type="number" id="Side3" placeholder="Sisi 3">
         </div>
     </main>
 
     <footer>
-        
+        <div class="footer-content">
+            <p>&copy; 2025 Mathlator. All rights reserved.</p>
+            <p>Developed by Nico</p>
+        </div>
     </footer>
 </body>
 </html>
