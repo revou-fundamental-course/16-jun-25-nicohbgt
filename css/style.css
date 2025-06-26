@@ -1,55 +1,142 @@
+/* Header */
+header {
+    background-color: aliceblue;
+    text-align: center;
+    border-bottom: 2px solid #ccc;
+}
+
+/* Body layout */
 body {
-    background-color: mintcream;
+    background-color: white;
     font-family: Arial, sans-serif;
     margin: 0;
-    padding: 20px;
     display: flex;
     flex-direction: column;
+    min-height: 100vh;
 }
 
-h1{
+/* Footer */
+footer {
+    background-color: aliceblue;
+    text-align: center;
+    border-top: 2px solid #ccc;
+    width: 100%;
+    position: relative;
+}
+
+/* Heading */
+h1, h4, h5 {
     color: black;
+    text-align: center;
+}
+
+h1 {
     font-size: 28px;
-    text-align: center;
 }
 
-h4{
-    color:black;
+h4 {
     font-size: 20px;
-    text-align: center;
 }
 
+h5 {
+    font-size: 16px;
+}
+
+/* Paragraph */
 p {
     color: black;
     font-size: 16px;
     text-align: center;
 }
 
+/* Container untuk gambar dan opsi */
 #container {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-bottom: 60px; /* Ruang untuk footer agar tidak tertutup */
 }
 
-#container img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    margin-bottom: 20px;
+/* Gambar berada di tengah dan responsif */
+img {
+    display: block;
+    margin: 0 auto 0px auto;
+    width:70%;
+    height: 70%;
+    border-radius: 0;
 }
 
-#container a {
+/* Link biasa */
+a {
     text-decoration: none;
     color: black;
     font-size: 18px;
     margin: 10px 0;
 }
 
-button {
+/* Tombol opsi di tengah */
+.opsi {
+    display: block;
     background-color: #4CAF50;
     color: white;
+    margin: 20px auto;
+    width: fit-content;
+    max-width: 100%;
     padding: 10px 20px;
+    font-size: 16px;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
     cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+/* Tombol hover dan states */
+.opsi:hover {
+    background-color: #45a049;
+}
+
+.opsi:focus {
+    outline: none;
+}
+
+.opsi:active {
+    background-color: #3e8e41;
+}
+
+.opsi:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.opsi:disabled:hover,
+.opsi:disabled:active {
+    background-color: #ccc;
+}
+
+/* Responsive tweaks */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    #container img {
+        width: 80%;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    h4 {
+        font-size: 18px;
+    }
+
+    h5 {
+        font-size: 14px;
+    }
+
+    .opsi {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
 }
